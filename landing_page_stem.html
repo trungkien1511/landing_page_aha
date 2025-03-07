@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <span>AHA Academy</span>
+                </div>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    ☰
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Chương trình học</a></li>
+                    <li><a href="#">Học viên tiêu biểu</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Sự kiện</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Hệ thống địa điểm</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="https://sylvanlearning.edu.vn/wp-content/uploads/2023/02/STEM-THUMBNAIL.png" alt="slide 1">
+                </div>
+                <div class="slide">
+                    <img src="assets/images/highlight2.png" alt="slide 2">
+                </div>
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </section>
+
+        <section class="cards-section">
+            <div class="title-subtitle">
+                <div class="title-content"> 
+                    <p class="age-label">Từ 4 đến 17 tuổi</p>
+                    <div class="highlight-text">
+                        <h2>Khám phá</h2>
+                        <h2 style="color: red;">tiềm năng</h2>
+                    </div>
+                </div>
+                <div class="subtitle-content">
+                    <p>Con có thiên hướng tư duy logic hay tư duy sáng tạo? Khám phá lộ trình phù hợp để con được trải nghiệm, bộc lộ và phát huy tối đa năng lực của mình.</p>
+                </div>
+            </div>
+        
+            <div class="cards-container">
+                <div class="cards-wrapper">
+        
+                    <!-- Card Hiển Thị trên Desktop -->
+                    <div class="card">
+                        <img src="https://framerusercontent.com/images/4TbLPNxfYCeHqWnUwnJhbMdVU.jpg" alt="Khóa học Coding">
+                        <div class="card-content">
+                            <h3>Chương trình Coding: Lập trình cho trẻ 9-17 tuổi</h3>
+                            <a href="#">Xem chi tiết</a>
+                        </div>
+                    </div>
+        
+                    <!-- Card Cho Mobile -->
+                    <div class="card-mobile">
+                        <h3>Khóa học Lập trình cho Trẻ em</h3>
+                        <span class="arrow">→</span>
+                    </div>
+        
+                    <!-- Card Hiển Thị trên Desktop -->
+                    <div class="card">
+                        <img src="https://framerusercontent.com/images/QtIiYfFB7uLSW1vYCcrf0Vd4.jpg" alt="Khóa học Digital Art & Design">
+                        <div class="card-content">
+                            <h3>Chương trình Digital Art & Design: Mỹ thuật số cho trẻ từ 6-17 tuổi</h3>
+                            <a href="#">Xem chi tiết</a>
+                        </div>
+                    </div>
+        
+                    <!-- Card Cho Mobile -->
+                    <div class="card-mobile">
+                        <h3>Khóa học Digital Art: Lộ trình học mỹ thuật số</h3>
+                        <span class="arrow">→</span>
+                    </div>
+        
+                    <!-- Card Hiển Thị trên Desktop -->
+                    <div class="card">
+                        <img src="https://framerusercontent.com/images/Img63DzdouVwHCuzh5YaHMxvWL0.jpg" alt="Khóa học Robotics">
+                        <div class="card-content">
+                            <h3>Chương trình Robotics: Lắp ráp và Lập trình Robotics cho trẻ 4-10 tuổi</h3>
+                            <a href="#">Xem chi tiết</a>
+                        </div>
+                    </div>
+        
+                    <!-- Card Cho Mobile -->
+                    <div class="card-mobile">
+                        <h3>Khóa học Robotics: Lắp ráp & chế tạo robot STEM</h3>
+                        <span class="arrow">→</span>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="cards-section">
+            <div class="title-subtitle">
+                <div class="title-content">
+                    <div class="highlight-text">
+                        <h2 style="color: red;">Bệ phóng</h2>
+                        <h2>nhân tài</h2>
+                    </div>
+                    <p>18 tuổi trở lên</p>
+                </div>
+                <p>Chinh phục những kỹ năng mới để xây dựng lợi thế cạnh tranh trên thị trường lao động. Sẵn sàng bắt đầu sự nghiệp mơ ước chỉ trong 6-8 tháng.</p>
+            </div>
+            <div class="cards-container">
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <img src="https://framerusercontent.com/images/uqvGn0OpOaZXfGMcR6NNz8mlYuQ.png?scale-down-to=2048" alt="">
+                        <div class="card-content">
+                            <h3>Khóa học Marketing Full</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-mobile">
+                        <h3>Khóa học Marketing Full</h3>
+                        <span class="arrow">→</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://framerusercontent.com/images/Q8bDu3VuqG4kQbrVDlLl3YyHFfw.png?scale-down-to=2048" alt="">
+                        <div class="card-content">
+                            <h3>Khóa học lập trình Web Full-stack</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="card-mobile">
+                        <h3>Khóa học lập trình Web Full-stack</h3>
+                        <span class="arrow">→</span>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://framerusercontent.com/images/L27wpIKfsQivDVJ2nRPekTffbY.png?scale-down-to=2048" alt="">
+                        <div class="card-content">
+                            <h3>Khóa học UI/UX từ cơ bản đến nâng cao</h3>
+                        </div>
+                    </div>
+
+                    <div class="card-mobile">
+                        <h3>Khóa học UI/UX từ cơ bản đến nâng cao</h3>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card-grid-section">
+            <div class="title-subtitle">
+                <div class="highlight-text">
+                    <h2>Bắt đầu hành trình</h2>
+                    <h2 style="color: red;">chinh phục ước mơ</h2>
+                </div>
+                <p>Trường học công nghệ có quy mô hàng đầu khu vực Đông Nam Á, hơn 40 cơ sở rải khắp Việt Nam</p>
+            </div>
+
+            <div class="image-wrapper">
+                <!-- Grid phần trên với 6 ảnh -->
+                <div class="grid-top">
+                    <!-- Ảnh lớn bên trái -->
+                    <div class="large-image">
+                        <img src="https://framerusercontent.com/images/4TbLPNxfYCeHqWnUwnJhbMdVU.jpg" alt="Ảnh lớn trái">
+                    </div>
+                
+                    <!-- 4 ảnh nhỏ ở giữa -->
+                    <div class="small-images">
+                        <div class="small-column">
+                            <div class="small-card">
+                                <img src="https://framerusercontent.com/images/QtIiYfFB7uLSW1vYCcrf0Vd4.jpg" alt="Ảnh nhỏ 1">
+                            </div>
+                            <div class="small-card">
+                                <img src="https://framerusercontent.com/images/Img63DzdouVwHCuzh5YaHMxvWL0.jpg" alt="Ảnh nhỏ 2">
+                            </div>
+                        </div>
+                        <div class="small-column">
+                            <div class="small-card">
+                                <img src="https://framerusercontent.com/images/Img63DzdouVwHCuzh5YaHMxvWL0.jpg" alt="Ảnh nhỏ 3">
+                            </div>
+                            <div class="small-card">
+                                <img src="https://framerusercontent.com/images/Img63DzdouVwHCuzh5YaHMxvWL0.jpg" alt="Ảnh nhỏ 4">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Ảnh lớn bên phải -->
+                    <div class="large-image">
+                        <img src="https://framerusercontent.com/images/Img63DzdouVwHCuzh5YaHMxvWL0.jpg" alt="Ảnh lớn phải">
+                    </div>
+                </div>
+                
+        
+                <div class="grid-bottom">
+                    <div class="small-card">
+                        <img src="https://framerusercontent.com/images/4TbLPNxfYCeHqWnUwnJhbMdVU.jpg" alt="Học từ bất kỳ đâu">
+                    </div>
+                
+                    <!-- Ảnh lớn giữa (chiếm 2 cột) -->
+                    <div class="large-card">
+                        <img src="https://framerusercontent.com/images/QtIiYfFB7uLSW1vYCcrf0Vd4.jpg" alt="X Project">
+                    </div>
+                
+                    <!-- Ảnh nhỏ bên phải -->
+                    <div class="small-card">
+                        <img src="https://framerusercontent.com/images/Img63DzdouVwHCuzh5YaHMxvWL0.jpg" alt="Bảo trợ tương lai">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="partners">
+            <!-- Tiêu đề -->
+            <div class="partners-header">
+                <div class="title-subtitle">
+                    <div class="highlight-text">
+                        <h2>Bước ra thế giới, </h2>
+                        <h2 style="color: red;">kiến tạo giá trị</h2>
+                        <h2>cho cộng đồng</h2>
+                    </div>
+                    <p>Ghé thăm những công ty/trường Đại học nơi học viên MindX đã và đang học tập/làm việc </p>
+                </div>
+            </div>
+        
+            <!-- Logo đối tác -->
+            <div class="partners-logos">
+                <div class="logo-row">
+                    <img src="https://framerusercontent.com/images/mgwJi7sfXAAKvxtZNqdWywRPYI.webp" alt="Shopee">
+                    <img src="https://framerusercontent.com/images/DpI6YFwKFYzXHWEM9nLtM1pQ9g.png" alt="AHT Tech">
+                    <img src="https://framerusercontent.com/images/9yzz4elN2iveiRtv1d6x3RaKuFI.png?scale-down-to=512" alt="Google">
+                    <img src="https://framerusercontent.com/images/oZOhFrie5GuwBDgICCk6n6n5KeI.png" alt="NextJobs">
+                    <img src="https://framerusercontent.com/images/pocjjy13xU3PAvolwfoKyjz3Ug.png" alt="Digibird">
+                    <img src="https://framerusercontent.com/images/Zr3lZHeO0hTCIL18Eqk5BLWaA0.png" alt="RKEI">
+                </div>
+        
+                <div class="logo-row">
+                    <img src="https://framerusercontent.com/images/Y08CQJrgab5MjbJSEL86WXob5Q.png" alt="Viettel">
+                    <img src="https://framerusercontent.com/images/yj7uxH6RkMCcQcwyRk9MKNfz0.svg" alt="Cốc Cốc">
+                    <img src="https://framerusercontent.com/images/y1wIVrTZedWHd79CwuFNlvqDzc.svg" alt="Chope">
+                    <img src="https://framerusercontent.com/images/k9NzPF4NOY6AOR4F7lLBNAKofI.svg" alt="Amazon">
+                    <img src="	https://framerusercontent.com/images/XcSZTfPEXUJfzZaBZAnpvhdUNo.png?scale-down-to=512" alt="Padlet">
+                    <img src="https://framerusercontent.com/images/fvAWyZnsWb4hO5FjZ4hU7NDf4Mw.png" alt="OpenCommerce">
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="footer-top">
+                    <!-- Logo MindX -->
+                    <div class="footer-logo">
+                        <img src="https://framerusercontent.com/images/fvAWyZnsWb4hO5FjZ4hU7NDf4Mw.png" alt="MindX Logo">
+                    </div>
+        
+                    <!-- Nội dung footer -->
+                    <div class="footer-more">
+                        <div class="footer-info-grid">
+                            <!-- Cột 1: Về MindX -->
+                            <div class="footer-column">
+                                <h2>Về MindX</h2>
+                                <ul>
+                                    <li><a href="#">Câu chuyện khởi nghiệp</a></li>
+                                    <li><a href="#">Tìm cơ sở gần bạn</a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Cột 2: Hoạt động -->
+                            <div class="footer-column">
+                                <h2>Hoạt động</h2>
+                                <ul>
+                                    <li><a href="#">Blog công nghệ</a></li>
+                                    <li><a href="#">Sự kiện nổi bật</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="footer-column">
+                                <h2>Kết nối với chúng tôi</h2>
+                                <div class="footer-socials">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                                </div>
+                            </div>
+                            
+                            <!-- Cột 3: Khám phá khóa học -->
+                            <div class="footer-column">
+                                <h2>Khám phá các khóa học</h2>
+                                <ul>
+                                    <li><a href="#">Cho trẻ từ 4 đến 17 tuổi</a></li>
+                                    <li><a href="#">Cho sinh viên và người đi làm</a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Cột 4: Hotline -->
+                            <div class="footer-column">
+                                <h2>Hotline</h2>
+                                <ul>
+                                    <li>K12 - HN: <a href="tel:02477717888">02477717888</a></li>
+                                    <li>K12 - TP.HCM: <a href="tel:02877717789">028 777 17789</a></li>
+                                    <li>K12 - Tỉnh & TP khác: <a href="tel:0247731666">0247731666</a></li>
+                                    <li>SV & Người đi làm: <a href="tel:02477705666">02477705666</a></li>
+                                </ul>
+                            </div>
+        
+                            <!-- Cột 5: Kết nối MXH -->
+                            
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Copyright -->
+                <div class="footer-bottom">
+                    <p>Copyright © 2023 MindX. All Rights Reserved</p>
+                    <p>Công ty Cổ phần Trường học Công nghệ MindX. Số đăng ký doanh nghiệp: 0110021468</p>
+                    <p>Địa chỉ: Tầng 2, Tòa 29T1 Hoàng Đạo Thúy, Phường Trung Hòa, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+    // Xử lý slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === index) {
+                slide.classList.add("active");
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Hiển thị slide đầu tiên
+    showSlide(currentSlide);
+
+    // Kiểm tra khi phần tử xuất hiện trong viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top < window.innerHeight - 100; // Xuất hiện khi còn cách 100px
+    }
+
+    // Kích hoạt hiệu ứng khi cuộn
+    function handleScroll() {
+        document.querySelectorAll(".cards-section, .card-grid-section, .partners").forEach((container) => {
+            if (isInViewport(container)) {
+                container.classList.add("show");
+            }
+        });
+    }
+
+    // Lắng nghe sự kiện cuộn
+    window.addEventListener("scroll", handleScroll)
+
+    // Kích hoạt ngay khi tải trang (nếu cần)
+    handleScroll();
+
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.body;
+
+        // Thêm hoặc xóa class 'show' và 'menu-open' từ body
+        navLinks.classList.toggle('show');
+        body.classList.toggle('menu-open');
+    }
+
+</script>
+</html>
