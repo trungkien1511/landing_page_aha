@@ -189,6 +189,7 @@ header {
 .cards-section.show {
     opacity: 1;
     transform: translateY(0);
+    background: linear-gradient(to bottom, #ffffff 0%, #bbc3ff 30%, #ffffff 100%);
 }
 
 .cards-section h2 p {
@@ -397,7 +398,7 @@ header {
     gap: 60px;
     text-align: center;
     padding: 80px 40px;
-    background: linear-gradient(to bottom, #fff, #ffe6e6); /* Hiệu ứng nền nhạt */
+    background: linear-gradient(to bottom, #ffffff, #ffffff); /* Hiệu ứng nền nhạt */
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -441,9 +442,11 @@ header {
 
 /* Footer */
 footer {
-    background: linear-gradient(to bottom, #ff2d2d, #ff3d3d);
+    background: linear-gradient(to bottom, #476ecf, #476ecf);
     color: white;
     font-family: Arial, sans-serif;
+    border-top-left-radius: 64px;
+    border-top-right-radius: 64px;
 }
 
 .footer-container {
