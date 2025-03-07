@@ -365,7 +365,7 @@
     // Kiểm tra khi phần tử xuất hiện trong viewport
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
-        return rect.top < window.innerHeight - 100; // Xuất hiện khi còn cách 100px
+        return rect.top < window.innerHeight - 10; // Xuất hiện khi còn cách 100px
     }
 
     // Kích hoạt hiệu ứng khi cuộn

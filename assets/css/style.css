@@ -180,16 +180,17 @@ header {
 .cards-section {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    padding: 40px 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    
 }
 .cards-section.show {
     opacity: 1;
     transform: translateY(0);
-    background: linear-gradient(to bottom, #ffffff 0%, #bbc3ff 30%, #ffffff 100%);
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background: linear-gradient(to bottom, #ffffff 0%, #d1d7ff 30%, #ffffff 100%);
 }
 
 .cards-section h2 p {
@@ -264,7 +265,6 @@ header {
     flex-direction: column;
     gap: 60px;
     justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
     opacity: 0; /* Ẩn ban đầu */
     transform: translateY(20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -290,15 +290,16 @@ header {
 .grid-top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Chia 3 cột */
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     max-width: 1352.800px;
+    height: 400px;
     margin: auto;
 }
 
 .grid-top .large-image {
     width: 326.200px;
-    height: 400px;
+    height: 100%;
     position: relative;
 }
 /* Ảnh lớn bên trái và phải */
@@ -314,6 +315,7 @@ header {
 .small-images {
     display: flex;
     gap: 20px;
+    height: 400px;
 
 }
 
