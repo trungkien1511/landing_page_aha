@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
     <div class="main-container">
@@ -28,20 +33,32 @@
                 </ul>
             </nav>
         </header>
+
         <section class="slider">
-            <div class="slider-container">
-                <div class="slide active">
-                    <img src="https://sylvanlearning.edu.vn/wp-content/uploads/2023/02/STEM-THUMBNAIL.png" alt="slide 1">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://sylvanlearning.edu.vn/wp-content/uploads/2023/02/STEM-THUMBNAIL.png" alt="slide 1" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/highlight2.png" alt="slide 2" loading="lazy">
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="assets/images/highlight2.png" alt="slide 2">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev" aria-label="Previous slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next" aria-label="Next slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
             </div>
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
         </section>
 
-        <section class="cards-section">
+        <section class="cards-section" data-aos="fade-up">
             <div class="title-subtitle">
                 <div class="title-content"> 
                     <p class="age-label">Từ 4 đến 17 tuổi</p>
@@ -107,15 +124,14 @@
             </div>
         </section>
         
-
-        <section class="cards-section">
+        <section class="cards-section" data-aos="fade-up">
             <div class="title-subtitle">
                 <div class="title-content">
                     <div class="highlight-text">
                         <h2 style="color: red;">Bệ phóng</h2>
                         <h2>nhân tài</h2>
                     </div>
-                    <p>18 tuổi trở lên</p>
+                    <p class="age-label">18 tuổi trở lên</p>
                 </div>
                 <p>Chinh phục những kỹ năng mới để xây dựng lợi thế cạnh tranh trên thị trường lao động. Sẵn sàng bắt đầu sự nghiệp mơ ước chỉ trong 6-8 tháng.</p>
             </div>
@@ -160,7 +176,7 @@
             </div>
         </section>
         
-        <section class="card-grid-section">
+        <section class="card-grid-section" data-aos="fade-up">
             <div class="title-subtitle">
                 <div class="highlight-text">
                     <h2>Bắt đầu hành trình</h2>
@@ -194,8 +210,6 @@
                     <img src="https://framerusercontent.com/images/4TbLPNxfYCeHqWnUwnJhbMdVU.jpg" alt="ảnh">
                 </div>
                 
-                
-                
                 <div class="course-card">
                     <img src="https://framerusercontent.com/images/4TbLPNxfYCeHqWnUwnJhbMdVU.jpg" alt="ảnh">
                 </div>
@@ -210,7 +224,7 @@
             </div>
         </section>
 
-        <section class="partners">
+        <section class="partners" data-aos="fade-up">
             <!-- Tiêu đề -->
             <div class="partners-header">
                 <div class="title-subtitle">
@@ -245,7 +259,7 @@
             </div>
         </section>
         
-        <footer>
+        <footer data-aos="fade-up">
             <div class="footer-container">
                 <div class="footer-top">
                     <!-- Logo MindX -->
@@ -322,53 +336,55 @@
     </div>
 </body>
 
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    // Xử lý slider
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active");
-            if (i === index) {
-                slide.classList.add("active");
-            }
+    AOS.init({
+            duration: 1000, // Tốc độ hiệu ứng (ms)
+            offset: 100, // Kích hoạt trước khi vào viewport
+            once: true // Chỉ chạy một lần
         });
-    }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true, // Cho phép vòng lặp (quay lại slide đầu tiên sau slide cuối)
+            autoplay: {
+                delay: 5000, // Tự động chuyển slide sau 5 giây
+                disableOnInteraction: false, // Tiếp tục autoplay sau khi người dùng tương tác
+            },
 
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // Cho phép nhấp vào dots để chuyển slide
+            },
 
-    // Hiển thị slide đầu tiên
-    showSlide(currentSlide);
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
-    // Kiểm tra khi phần tử xuất hiện trong viewport
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return rect.top < window.innerHeight - 10; // Xuất hiện khi còn cách 100px
-    }
+            // Optional: Thêm hiệu ứng chuyển slide
+            effect: 'fade', // Hiệu ứng mờ dần giống slider thủ công
+            fadeEffect: {
+                crossFade: true,
+            },
 
-    // Kích hoạt hiệu ứng khi cuộn
-    function handleScroll() {
-        document.querySelectorAll(".cards-section, .card-grid-section, .partners").forEach((container) => {
-            if (isInViewport(container)) {
-                container.classList.add("show");
-            }
+            // Responsive breakpoints
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+            },
         });
-    }
-
-    // Lắng nghe sự kiện cuộn
-    window.addEventListener("scroll", handleScroll)
-
-    // Kích hoạt ngay khi tải trang (nếu cần)
-    handleScroll();
+    });
 
     function toggleMenu() {
         const navLinks = document.querySelector('.nav-links');
